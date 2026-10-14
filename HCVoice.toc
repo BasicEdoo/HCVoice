@@ -1,0 +1,17 @@
+## Interface: 11509
+## Title: HCVoice – RP Reactions
+## Notes: Contextual character voice reactions for Classic Era, with Hardcore dungeon boss moments.
+## Author: Edòó
+## Version: 1.7.3
+## X-License: All Rights Reserved
+## SavedVariables: HCVoiceDB
+## SavedVariablesPerCharacter: HCVoiceCharDB
+
+HCVoice.lua
+HCVoice_Bosses.lua
+Bosses/Content.lua
+HCVoice_Director.lua
+HCVoice_Social.lua
+HCVoice_Situations.lua
+HCVoice_LivingWorld.lua
+HCVoice_GUI.lua

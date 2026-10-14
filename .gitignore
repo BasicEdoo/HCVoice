@@ -1,0 +1,19 @@
+# Local development dependencies and caches
+node_modules/
+__pycache__/
+*.py[cod]
+
+# Generated release files and local verification output
+release/dist/
+*.zip
+*.log
+*.tmp
+
+# Credentials and editor settings
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store

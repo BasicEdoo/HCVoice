@@ -1,0 +1,106 @@
+{
+  "rfc": {
+    "title": "Ragefire Chasm",
+    "url": "https://www.wowhead.com/classic/guide/classic-dungeons-overview"
+  },
+  "wc": {
+    "title": "Wailing Caverns",
+    "url": "https://www.wowhead.com/classic/guide/wailing-caverns-dungeon-strategy-wow-classic"
+  },
+  "deadmines": {
+    "title": "The Deadmines",
+    "url": "https://www.wowhead.com/classic/guide/deadmines-dungeon-strategy-wow-classic"
+  },
+  "sfk": {
+    "title": "Shadowfang Keep",
+    "url": "https://www.wowhead.com/classic/guide/shadowfang-keep-dungeon-strategy-wow-classic"
+  },
+  "stockade": {
+    "title": "The Stockade",
+    "url": "https://www.wowhead.com/classic/guide/the-stockade-dungeon-strategy-wow-classic"
+  },
+  "bfd": {
+    "title": "Blackfathom Deeps",
+    "url": "https://www.wowhead.com/classic/de/guide/blackfathom-deeps-dungeon-strategy-wow-classic"
+  },
+  "gnomeregan": {
+    "title": "Gnomeregan",
+    "url": "https://www.wowhead.com/classic/guide/gnomeregan-dungeon-strategy-wow-classic"
+  },
+  "rfk": {
+    "title": "Razorfen Kraul",
+    "url": "https://www.wowhead.com/classic/guide/razorfen-kraul-dungeon-strategy-wow-classic"
+  },
+  "sm-graveyard": {
+    "title": "Scarlet Monastery – Graveyard",
+    "url": "https://www.wowhead.com/classic/guide/scarlet-monastery-dungeon-strategy-wow-classic"
+  },
+  "sm-library": {
+    "title": "Scarlet Monastery – Library",
+    "url": "https://www.wowhead.com/classic/guide/scarlet-monastery-dungeon-strategy-wow-classic"
+  },
+  "sm-armory": {
+    "title": "Scarlet Monastery – Armory",
+    "url": "https://www.wowhead.com/classic/guide/scarlet-monastery-dungeon-strategy-wow-classic"
+  },
+  "sm-cathedral": {
+    "title": "Scarlet Monastery – Cathedral",
+    "url": "https://www.wowhead.com/classic/guide/scarlet-monastery-dungeon-strategy-wow-classic"
+  },
+  "rfd": {
+    "title": "Razorfen Downs",
+    "url": "https://www.wowhead.com/classic/guide/razorfen-downs-dungeon-strategy-wow-classic"
+  },
+  "uldaman": {
+    "title": "Uldaman",
+    "url": "https://www.wowhead.com/classic/guide/uldaman-dungeon-strategy-wow-classic"
+  },
+  "zf": {
+    "title": "Zul'Farrak",
+    "url": "https://www.wowhead.com/classic/guide/zulfarrak-dungeon-strategy-wow-classic"
+  },
+  "maraudon": {
+    "title": "Maraudon",
+    "url": "https://www.wowhead.com/classic/guide/maraudon-dungeon-strategy-wow-classic"
+  },
+  "st": {
+    "title": "The Temple of Atal'Hakkar / Sunken Temple",
+    "url": "https://www.wowhead.com/classic/guide/temple-of-atalhakkar-sunken-temple-dungeon-strategy-wow-classic"
+  },
+  "brd": {
+    "title": "Blackrock Depths",
+    "url": "https://www.wowhead.com/classic/guide/blackrock-depths-detention-block-dungeon-strategy-wow-classic"
+  },
+  "lbrs": {
+    "title": "Lower Blackrock Spire",
+    "url": "https://www.wowhead.com/classic/guide/lower-blackrock-spire-lbrs-dungeon-strategy-wow-classic"
+  },
+  "ubrs": {
+    "title": "Upper Blackrock Spire",
+    "url": "https://www.wowhead.com/classic/guide/upper-blackrock-spire-ubrs-dungeon-strategy-wow-classic"
+  },
+  "dm-east": {
+    "title": "Dire Maul – East",
+    "url": "https://www.wowhead.com/classic/guide/dire-maul-east-dungeon-strategy-wow-classic"
+  },
+  "dm-west": {
+    "title": "Dire Maul – West",
+    "url": "https://www.wowhead.com/classic/guide/dire-maul-west-dungeon-strategy-wow-classic"
+  },
+  "dm-north": {
+    "title": "Dire Maul – North",
+    "url": "https://www.wowhead.com/classic/guide/dire-maul-north-dungeon-strategy-wow-classic"
+  },
+  "scholomance": {
+    "title": "Scholomance",
+    "url": "https://www.wowhead.com/classic/guide/scholomance-dungeon-strategy-wow-classic"
+  },
+  "strat-live": {
+    "title": "Stratholme – Live / Scarlet",
+    "url": "https://www.wowhead.com/classic/guide/stratholme-live-dungeon-strategy-wow-classic"
+  },
+  "strat-undead": {
+    "title": "Stratholme – Undead / Scourge",
+    "url": "https://www.wowhead.com/classic/guide/stratholme-undead-dungeon-strategy-wow-classic"
+  }
+}

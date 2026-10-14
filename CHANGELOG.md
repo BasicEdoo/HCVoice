@@ -1,0 +1,277 @@
+# Changelog
+
+## 1.7.3
+
+- Keep ordinary small hits calm. HELPME now responds to rapid health loss; healing and emergency calls retain their configured thresholds. Recovery cancels stale help calls.
+- Remove confirmed dead attackers from incoming-danger checks and allow a cancelled, unplayed health warning to react to a later real drop.
+- Thank distinct incoming buff providers independently while keeping repeated buffs from the same player together.
+- Let manual replies resolve their pending social exchange. Custom nearby emote prose cannot trigger an automatic Living World joke response; own-emote identity checks are explicit.
+- Validate profile text before applying it. Empty or malformed imports leave settings intact; omitted settings, window placement and local diagnostic preferences are preserved.
+- Correct the settings guidance: blocked automatic emotes stay silent.
+- Preserve settings schema 170. Automated checks cover simulated behavior; live audio, timing and UI still need a game-client check.
+
+## 1.7.2
+
+- Remove the extra random 0.6–1.5 second delay from deliberate target greetings after the configured HELLO wait. Social voice spacing still applies.
+- Keep thanks for recognized incoming buffs independent of Local RP frequency. The reaction's own settings and cooldowns still apply.
+- Preserve existing profiles and settings schema 170.
+
+## 1.7.1
+
+- Standardize the public name as HCVoice – RP Reactions, by Edòó.
+- Use English labels throughout the reply card, including its actions and fallback prompt.
+- Add a concise README, an organized user guide and a generated English boss reference.
+- Organize historical research, development tools and publication material in dedicated folders.
+- Pin development dependencies and verify release packages using the extracted runtime files.
+- Direct pet attack, recall, danger and mourning reactions at your pet, even with a player selected. Missing or replaced pets cancel queued reactions.
+- Keep cooldowns, saved-variable names and settings schema 170 unchanged.
+
+## 1.7.0
+- Distribution preparation: public author Edòó, All Rights Reserved license,
+  and updated installation and compatibility documentation.
+- Automatic Classic Era Hardcore boss reactions: 230 authored encounter cards
+  across 26 dungeon/wing sections. Existing Blizzard emotes only; no boss popups.
+- Selected multi-phase and spell events, explicit encounter completion rules,
+  delayed victories, group-death suppression and cancellation of stale gestures.
+- Actual map, NPC GUID and player/group participation checks. Ordinary raids,
+  other versions, strangers' kills and mid-fight reloads do not activate scenes.
+- Hidden group coordination and deduplication with generic difficult victories.
+- Reactions settings include the boss master switch and 26 dungeon switches.
+  Schema 170 preserves existing preferences and keeps Quiet quiet.
+- Lua 5.1 syntax checks pass for eight runtime files; 181 simulated behavior
+  tests pass. Three old tests now wait long enough for the existing director
+  delay; pet and survival runtime timing was not changed.
+- Audio, animation, menu rendering and encounter signals need live game checks.
+
+## 1.6.6
+- Compact outdoor reply card: 320x140 instead of 430x202, or 320x110 for
+  one row of answers. Defaults to the right edge; saved positions survive.
+- Removed the large branded header, repeated instruction and duplicate close
+  button. Neutral border and normal UI layering reduce visual interruption.
+- All answers stay directly clickable. Long text is constrained to one line
+  with the full context available on hover. Ignore remains a separate action.
+- Dungeon automation, reply expiry, recipient validation and pet voices retain
+  their existing behavior. Verify appearance in the live client after /reload.
+
+## 1.6.5
+- Added CHARGE when a player-issued pet attack is confirmed, and WHISTLE when
+  Follow recalls an attacking pet or a pet on Stay. Buttons, keybinds and the
+  existing /petattack and /petfollow commands use the same detection.
+- Observe pet commands using secure post-hooks and current pet-bar state;
+  HCVoice never issues or replaces pet-control actions. Failed commands,
+  automatic defense and ordinary returns after a kill produce no command voice.
+- CHARGE is limited to once per fight; both new scenarios have an eight-second
+  cooldown. New commands, changed targets, pet death/removal, settings and world
+  changes cancel stale voices. Emergency reactions retain priority.
+- Pet commands work in combat and dungeons without popup choices. The recall
+  whistle is a command, so the temporary pause for jokes does not suppress it.
+- Two new Reactions > Combat settings bring the total to 35 scenarios. Schema
+  165 preserves existing choices; Quiet upgrades keep the new scenarios off.
+- Six Lua files pass Lua 5.1 syntax checks and all 145 behavior tests pass,
+  including 19 new pet-command tests. Live-client audio and controls still
+  need verification after /reload.
+
+## 1.6.4
+- Automatic contextual replies inside 5-player dungeons, including during
+  combat. Recognized directed emotes no longer require popup choices there.
+- Dungeon replies bypass the outside-dungeon reply chance and combat setting,
+  while retaining conversation cooldowns, priority, explicit off settings,
+  ignored players and recipient/readiness checks before playback.
+- Suppressed every reply-popup path in dungeons, including previews. Entering
+  closes an old choice; leaving cancels queued dungeon answers. Unknown and
+  custom emotes stay silent, with no delayed popup after the dungeon.
+- Updated reply-setting descriptions; no saved-setting migration is needed.
+- Lua 5.1 syntax and all 126 simulated tests pass, including 14 dungeon cases.
+  Live-client timing, sound and menu appearance still need a check after /reload.
+
+## 1.6.3
+- Added directed MOO replies: MOO for Tauren, LAUGH for other races, with shared
+  conversation cooldowns. Manually typed MOO also prevents a duplicate answer.
+- Directed WHISTLE, SIGH, YAWN and BORED now offer fitting reply choices.
+  Ambient emotes stay silent and custom prose is never answered automatically.
+- Added mana-break WAIT for an actual Drink aura at 60% mana or less in a safe
+  party, and NOD after an announced break ends at 90% mana or more.
+- Distinguish finishing a drink by walking from leaving early without enough
+  mana. Cancel misleading ready signals after combat, party or setting changes.
+- Avoid OOM, duplicate WAIT and idle jokes during an announced drink.
+- Added HELPME for a pet falling to 25% health in combat and restrained mourning
+  for confirmed pet death. Dismissal and missing units do not count as death.
+- Recheck pet identity, health and revival before playback; player emergencies
+  outrank pet warnings. Pet mourning waits until combat ends, with expiry.
+- Added four configurable scenarios; Quiet upgrades keep them off. Retained
+  HUG, party BYE, received-buff thanks and existing custom choices.
+- Six runtime Lua files pass Lua 5.1 syntax checks; 112 simulated behavior tests
+  pass. In-game timing and the new menu rows still need a check after /reload.
+
+## 1.6.2
+- Kept HUG as a contextual RP choice; Voice Lab labels it as a text RP interaction.
+- Added BORED and WHISTLE alongside existing YAWN for rare, untargeted long waits,
+  solo or in a party. Idle scenes no longer invite shared response chains.
+- Added Tauren-only MOO as an occasional safe party-joke variation and manual
+  voice. Other races retain JOKE; menus and the final call enforce the race rule.
+- Kept SIGH for its existing relief, recovery and disappointment contexts.
+- Recheck movement, casting, channeling, party combat/death and raids so queued
+  downtime reactions are cancelled when their context ends.
+- Preserve existing preferences, HUG choices, party BYE and received-buff thanks.
+- Lua 5.1 syntax and 79 simulated behavior tests pass, including 17 new tests.
+  The added sounds and menu layout still need a check in the game after /reload.
+
+## 1.6.1
+- Removed the separate activation requirement for contextual FLIRT/KISS/HUG
+  reply choices and its settings checkbox; replies are still chosen in a popup.
+- Every observed party departure now triggers exactly BYE, including brief
+  memberships, simultaneous departures, combat and Quiet mode. No chance,
+  encounter duration or cooldown can suppress it while HCV is enabled.
+- Cancelled pending welcomes for departing members; repeated roster updates
+  do not repeat BYE. Blizzard still controls whether the emote can play.
+- Removed obsolete intimate and party-farewell options from migrated profiles.
+- Lua 5.1 syntax and 62 simulated behavior tests pass; live-client checks remain.
+
+## 1.6.0
+- Removed outgoing-buff emotes and their setting; receiving buffs still earns
+  targeted thanks. Giving a buff also cancels a pending greeting to that target.
+- Added one shared director for local scenes, automatic replies and Living World.
+- Urgent warnings no longer wait for social spacing; stale warnings are removed
+  after recovery and simultaneous danger signals choose one relevant voice.
+- Unified master off/on behavior, callback cancellation and current-setting checks.
+- Improved sender-aware English emote classification, conservative custom prose,
+  conversation-family cooldowns and awareness of the player's own emotes.
+- Protected active popup choices from replacement; saved popup position and
+  rechecked sensitive reply permissions at click time.
+- Made deaths take precedence over celebration and delayed mourning until safe.
+- Removed inappropriate humor from near-death and wipe recovery variation.
+- Attributed effective healing per helper and verified completed trades/partners.
+- Added raid level/death tracking and restrained ordinary instance-elite victories.
+- Updated Living World to protocol 2 with legacy reception, assigned compatible
+  party-joke responders, exact-token suppression and one-step response markers.
+- Added complete presets, separate shared-scene frequency and recent decisions.
+- Kept profile import data-only and preserved custom settings and session ignores.
+- Split director and social interpretation into separate modules.
+- Added 49 simulated behavior tests; live-client voice/layout checks remain.
+
+## 1.5.0
+- Reframed the popup as a suggestion UI only for ambiguous emotes directed at
+  your character, such as flirting, insults, requests and tactical calls.
+- HELLO, WAVE, THANK, NOD and other obvious directed emotes now answer naturally
+  without a popup; cooldown or chance suppression stays silent.
+- Prevented ambient emotes, Living World scenes, combat events, loot, buffs,
+  levels, targeting and duel requests from opening the reaction popup.
+- Removed the automatic voice fallback button so a blocked natural reaction
+  stays silent instead of adding another unrelated UI interruption.
+- Removed scenario-level Ask me modes and the elite CHARGE popup. CHARGE remains
+  available as a manual voice in Voice Lab.
+- Enabled flirt and insult suggestion categories for upgraded characters while
+  keeping intimate FLIRT, KISS and HUG response choices separately opt-in.
+
+## 1.4.9
+- Deliberately targeting a neutral, non-attackable opposite-faction player can
+  now trigger the same guaranteed HELLO as a friendly player.
+- Attackable enemy players, NPCs and ordinary proximity remain ineligible.
+
+## 1.4.8
+- Stopped the CHARGE UI from appearing on ordinary elite trash in dungeons and
+  raids, where nearly every target can otherwise qualify as elite.
+- Instance CHARGE prompts are now reserved for targets identified as bosses.
+- Open-world elite, rare and boss prompts keep their existing behavior.
+
+## 1.4.7
+- Removed all NPC reactions and their settings, including flight-master,
+  gossip, vendor, trainer, bank, quest and taxi-window triggers.
+- Deliberately targeting a friendly non-group player now always uses HELLO;
+  WAVE and SALUTE are no longer greeting variants for that trigger.
+- Fixed Classic Era returning false after an accepted PerformEmote call; the
+  reaction is now recorded once instead of logged as blocked and repeated.
+- Added occasional voiced JOKE/SILLY lines while safely travelling or waiting
+  in a party, without requiring the player to stand completely idle.
+- Increased party-joke spacing to roughly 10-15 minutes after each joke and
+  limited automatic reactions to one deterministically selected responder.
+- Party jokes never start during combat, while dead or in a raid.
+
+## 1.4.6
+- Added natural thanks when a non-group player meaningfully helps fight your
+  current enemy; simple proximity, targeting and one stray hit do not count.
+- Added a delayed thank-you after another friendly player resurrects you.
+- Expanded meaningful-healing thanks with restrained voice-first variation.
+- Party and raid members are excluded from routine combat-assist thanks so
+  normal group kills do not produce constant gratitude spam.
+
+## 1.4.5
+- Major group moments now allow every HCVoice player to react once instead of
+  letting the first synced response silence everyone else's local reaction.
+- Boss and elite victories, party levels, deaths and wipe recovery retain
+  varied voice-first emotes with a natural short delay between players.
+- Equivalent local and synced scenes are coalesced into one reaction per player.
+- Group roles and a few clear class identities lightly influence emote variety;
+  they never block shared celebrations or create a personality system.
+
+## 1.4.4
+- Added an ask-only /charge voice button for deliberately targeted hostile
+  elites, rares and bosses outside combat.
+- The tactical call can never become automatic, including under Full RP.
+- Delayed or visible CHARGE prompts are invalidated on target change and hidden
+  as soon as combat begins.
+
+## 1.4.3
+- Outgoing buff reactions now correlate SPELL_CAST_SUCCESS with the friendly
+  aura application, supporting direct buffs and shields beyond the name list.
+- Long class buffs are essential 100% scenes when enabled and are not reduced by
+  the general frequency slider.
+- Passive aura pulses remain excluded because they have no matching direct cast;
+  explicit aura, totem, stance, presence and aspect names are also rejected.
+
+## 1.4.2
+- Party and raid members no longer trigger HELLO, WAVE or SALUTE merely because
+  you select their unit frame or character.
+- Group targeting never starts a greeting/farewell target session; joining the
+  group remains the single natural welcome moment.
+
+## 1.4.1
+- Added voice-first WELCOME / NOD / HELLO / JOKE variation after you actively
+  apply a recognized long-term buff to another player outside combat.
+- Excluded self-buffs, paladin-style auras, totems, stances, presences, aspects
+  and passive effects from the outgoing buff reaction.
+- Added global and per-target cooldowns so group-wide buff rounds produce one
+  natural reaction instead of repeated voice spam.
+
+## 1.4.0
+- Added Living World scene communication for party, raid and nearby moments.
+- Used a complete dungeon run as the interaction model: party formation, waits,
+  combat pressure, deaths, wipe recovery, loot, humor, bosses and farewells.
+- Added voice-first weighted variation with recent-emote repetition penalties.
+- Added staggered shared reactions so boss victories do not fire simultaneously.
+- Added curated response policies for victories, deaths, levels, greetings,
+  gratitude, waiting, loot, idle banter and JOKE/SILLY interactions.
+- Reused Automatic, Ask me and Off behavior; sensitive actions remain manual.
+- Added scene validation, expiry, sender throttling, duplicate coalescing and
+  one-step response markers to prevent loops.
+- Added Living World controls and scene tests to the existing Replies page.
+- Added /hcv lwtest commands and profile export/import for Living World settings.
+- Fixed DoEmote fallback return handling so an unrestricted false result is not
+  mistaken for failure.
+
+## 1.3.0
+- Rebuilt settings into Overview, Reactions, Replies, Profiles, Voice Lab and Advanced.
+- Added Automatic, Ask me, Manual only and Off modes for semantic scenarios.
+- Added four-choice movable reply popup with original message, dismiss and session ignore.
+- Added safe reply modes, category controls, cooldowns and duplicate/loop protection.
+- Added validated short-term social encounter memory and delayed farewells.
+- Added generic Voice Lab guidance for every supported voice.
+- Added account-wide named profiles plus safe export/import strings for friends.
+- Added optional meaning-based NPC and personal-loot reactions, disabled by default.
+- Added transient UI cleanup and /hcvoice close.
+- Preserved per-character settings, fixed meanings and the multi-reaction queue.
+
+## 1.2.0
+- Made HCVoice character-neutral and shareable.
+- Added per-character settings through HCVoiceCharDB.
+- Replaced the personal character preset with Classic RP.
+- Fixed overlapping tab contents and unreliable close buttons.
+- Added semantic YAWN/JOKE idle variation.
+- Added contextual social response buttons.
+- Added BOW and HUG to the manual Voice Lab.
+- Preserved cooldown-aware reaction queuing.
+
+## 1.1.0
+- Replaced random event mappings with semantic combat and social scenarios.
+- Added deliberate 1.5-second player greetings and established farewells.
+- Removed automatic pet, taxi, quest-turn-in and target-only threat mappings.
