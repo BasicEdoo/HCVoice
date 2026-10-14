@@ -12,11 +12,13 @@ HCVoice uses the game's existing character voices and emotes for contextual role
 
 [Download on CurseForge](https://www.curseforge.com/wow/addons/hcvoice) · [User guide](docs/USER_GUIDE.md) · [Changelog](CHANGELOG.md)
 
-## The idea
+## Why we created HCVoice
 
-A useful buff, a close call or a quiet pause with your party can be a small roleplay moment. HCVoice connects those events to your character's existing expressions, with settings for how often and in which situations they participate.
+We created HCVoice because we wanted our characters to feel more present in the world of Classic WoW. A stranger gives you a helpful buff. Your pet rushes into a fight. Your party survives a dangerous pull. Those small moments are part of what makes the game memorable, and we wanted our characters to acknowledge them.
 
-Timing matters as much as the reaction itself. A call for healing should disappear when health recovers; a celebration should give way to a party member's death. The reaction director checks whether each queued moment still makes sense before attempting it.
+The focus is immersion: a timely thank-you, a greeting, a call for help or a shared reaction with your group. By using the voices and emotes already in the game, HCVoice aims to make those expressions feel at home in Classic. Players choose how much their character participates through presets and individual reaction settings.
+
+Knowing when to stay quiet is part of that idea. A call for healing should disappear when health recovers; a celebration should give way to a party member's death. HCVoice checks whether each queued moment still fits the situation, so personality comes from the context and timing of a reaction.
 
 ## Quick start
 
